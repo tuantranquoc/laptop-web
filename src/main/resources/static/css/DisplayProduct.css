@@ -1,0 +1,648 @@
+.search{
+    box-sizing: border-box;
+    text-align: left;
+    height: 40px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    font-family: sans-serif;
+    position: relative;
+    width: 450px;
+
+    border: #cda9ac;
+    border-radius: 50px / 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #F0F0F0;
+    outline: none;
+}
+.Logo{
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 20px;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top:auto;
+    position: relative;
+    color: black;
+}
+header{
+    display: flex;
+}
+header ul{
+    float: left;
+    display: flex;
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 30px;
+    color: black;
+}
+
+header ul li img{
+    width: 32px;
+    position: relative;
+    margin-top: 20px;
+}
+header ul{
+    background-color: #FFFFFF;
+    width: 1435px;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 10vh;
+
+}
+
+.search-button {
+    position: absolute;
+    width: 55px;
+    height: 40px;;
+    top: -2px;
+    left: 49%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px / 50px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    outline: none;
+}
+.Sign{
+    float: right;
+    margin-right: 50px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.Shopping-logo{
+    width: 28px;
+    position: relative;
+    margin-top: 18px;
+}
+
+.nav-bar ul{
+    display: flex;
+    background-color: #403232;
+    height: 5vh;
+    list-style: none;
+}
+.nav-bar {
+    width: 1477px;
+    margin-top: 50px;
+    position: absolute;
+    margin-left: -10px;
+    top: 3px;
+}
+
+
+.nav-bar ul li a{
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 25px;
+    color: whitesmoke;
+    line-height: 35px;
+    margin-left: 10px;
+    height: 5vh;
+    position: relative;
+    left: 80px;
+    font-family: Century;
+    transition: all .2s ease-in-out;
+}
+.nav-bar ul li a:hover{
+    background: #B8C309;
+    transform: scale(1.1);
+}
+
+#search-container{
+    margin-top: 100px;
+    height: 100vh;
+    width: 200px;
+    margin-left: 100px;
+}
+#product-container{
+    width: 1000px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.bar{
+    display: flex;
+    float: left;
+}
+.search-bar{
+    display: inline-block;
+}
+
+.search-bar h3{
+    margin-top: -360px;
+    margin-left: -70px;
+}
+.search-bar hr{
+    margin-top: -360px;
+    margin-left: -70px;
+}
+
+.search-brand {
+    text-align: right;
+}
+.search-brand p{
+    text-align: center;
+}
+
+.list{
+    text-align: left;
+    margin-left: 100px;
+}
+
+.display-product-info{
+    display: flex;
+}
+.display-content{
+    width: 250px;
+}
+.display-content p{
+    text-align: left;
+}
+.display-content hr{
+    width: 100px;
+}
+
+section{
+    width: 1475px;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: -10px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body{
+    background-color: #f1f1f1;;
+}
+#product-name{
+    height: 9vh;
+    width: 1200px;
+    margin-left: 100px;
+    margin-top: 60px;
+    background-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.product-name h2{
+    position: relative;
+    top: 15px;
+    left: -290px;
+}
+.product-name-p {
+    right: 435px;
+    position: relative;
+    bottom: 10px;
+}
+.product-name-inline{
+    display: flex;
+}
+.product-name-inline p{
+    position: relative;
+    text-align: left;
+    top: 27px;
+    right: 400px;
+}
+.product-name-inline h2{
+    position: relative;
+    left: -430px;
+    margin-right: 10px;
+}
+.section-control-1{
+    display: flex;
+}
+
+#image{
+    height: 80vh;
+    width: 450px;
+    margin-left: 100px;
+    background-color: white;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+}
+
+#cost{
+    height: 80vh;
+    width: 450px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: white;
+    border-right: none  ;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+#technical-specifications{
+    width: 308px;
+    height: 80vh;
+    background-color: white;
+    border-left: 1px solid #dbdbdb;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+#image{
+    height: 80vh;
+}
+
+.section-control-1{
+    position: static;
+}
+.img{
+    bottom: 90px;
+    position: relative;
+}
+.cost-info{
+    text-align: left;
+    position: relative;
+    bottom: 50px;
+
+}
+.cost-info h3{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.h3{
+    display: flex;
+}
+
+.cost{
+    font-size: 35px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: #3d455c;
+    margin-bottom: 10px;
+}
+.cost-ul{
+    display: flex;
+
+}
+.ul-1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    position: relative;
+    border: 1px solid #ff6666;
+    background-color: #FEF6F7;
+    height: 7vh;
+    width: 120px;
+
+}
+.ul-1-p1{
+    position: relative;
+    bottom: 8px;
+    margin-left: 10px;
+    font-family: "Bookman Old Style";
+    font-size: 13px;
+}
+
+.ul-1-p2 {
+    position: relative  ;
+    bottom: 19px;
+    margin-left: 25px;
+}
+.ul-2{
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    float: left;
+    position: relative;
+    background-color: 	#D5D5D5;
+    height: 7vh;
+    width: 120px;
+    border: 1px solid #dbdbdb;
+}
+.promotion{
+    border: 1px dotted black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 20vh;
+    margin-top: 10px;
+}
+.h3{
+    position: relative;
+    bottom: 15px;
+    margin-left: 15px;
+    font-size: 25px;
+    color: #3d455c;
+}
+.promotion li{
+    position: relative;
+    bottom: 20px;
+    margin-left: 15px;
+}
+.add-shopping-cart {
+    width: 400px;
+    height: 8vh;
+    background-color: #CE021C;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.add-shopping-cart:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color:	#BD0519;
+}
+.add-shopping-cart p{
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.p1{
+    top: 5px;
+    position: relative;
+}
+.p2{
+    bottom: 10px;
+    position: relative;
+    font-size: 15px;
+}
+
+.payment-type{
+    display: flex;
+}
+.by-phone{
+    height: 8vh;
+    width: 190px ;
+    background-color: 	#3875B0;
+    margin-right: 20px;
+    border-radius: 10px / 10px;
+    color: white;
+    text-align: center;
+}
+.by-phone:hover{
+    background-color: #1A89B4;
+}
+
+.by-card:hover{
+    background-color: #1A89B4;
+}
+
+.by-card{
+    width: 190px;
+    background-color: 		#3875B0;
+    border-radius: 10px / 10px;
+    color: white;
+    text-align: center;
+    height: 8vh;
+}
+
+.technical-specifications{
+    position: relative;
+    bottom: 105px;
+    right: 10px;
+    float: left;
+    text-align: left;
+}
+.p3{
+    position: relative;
+    bottom: 10px;
+}
+.p4{
+    bottom: 20px;
+    position: relative;
+}
+
+.technical-specifications h3{
+    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.back{
+    width: 300px;
+    background-color: #3d455c;
+    height: 5vh;
+    border-radius: 10px / 10px;
+}
+.back:hover{
+    background-color: #5c678a;
+}
+.back p{
+    margin-top: 20px;
+}
+.back a{
+    position: relative;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    top: 7px;
+}
+
+#display-01{
+    margin-top: 30px;
+    height: 67vh;
+    width: 1200px;
+    margin-left: 120px;
+    background-color: white;
+    margin-bottom: 50px;
+    border: none;
+}
+
+
+.section-control-1{
+    margin-left: 20px;
+}
+#product-name{
+    position: static;
+    margin-left: 120px;
+
+}
+.display-content{
+    padding: 5px;
+    margin-right: 0px;
+    float: left;
+    width: 290px;
+}
+.display-content:hover{   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content:active{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content p{
+    text-align: left;
+    font-size: 13px;
+   color:  #595959;
+}
+.display-content hr{
+    width: 100px;
+}
+.display-product-info{
+    display: flex;
+
+}
+.cost{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    color: #404040;
+}
+
+.section-name-1 h2{
+    margin-left: 120px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: #3d455c;
+}
+/**/
+
+.text, .password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.75)), url('../images/giphy.gif');
+}
+#contact {
+    height: 50vh;
+}
+
+#contact ul{
+    font-family: Century;
+    color: #3d455c;
+    text-align: left;
+    position: relative;
+    left: 30px;
+}
+#contact h2{
+    font-family:  Century;
+    color: #333333;
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-family: sans-serif;
+}

@@ -1,0 +1,130 @@
+
+
+.search{
+    box-sizing: border-box;
+    text-align: left;
+    height: 40px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    font-family: sans-serif;
+    position: relative;
+    width: 450px;
+
+    border: #cda9ac;
+    border-radius: 50px / 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #F0F0F0;
+    outline: none;
+}
+.Logo{
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 20px;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top:auto;
+    position: relative;
+    color: black;
+    font-family: Century;
+}
+header{
+    display: flex;
+}
+header ul{
+    float: left;
+    display: flex;
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 30px;
+    color: black;
+}
+
+header ul li img{
+    width: 32px;
+    position: relative;
+    margin-top: 20px;
+}
+header ul{
+    background-color: #FFFFFF;
+    width: 1435px;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 10vh;
+
+}
+
+.search-button {
+    position: absolute;
+    width: 55px;
+    height: 40px;;
+    top: -2px;
+    left: 50%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px / 50px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    outline: none;
+}
+.Sign{
+    float: right;
+    margin-right: 50px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.Shopping-logo{
+    width: 28px;
+    position: relative;
+    margin-top: 18px;
+}
+
+.nav-bar ul{
+    display: flex;
+    background-color: #403232;
+    height: 5vh;
+    list-style: none;
+}
+.nav-bar {
+    width: 1477px;
+    margin-top: 50px;
+    position: absolute;
+    margin-left: -10px;
+    top: 3px;
+}
+
+
+.nav-bar ul li a{
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 25px;
+    color: whitesmoke;
+    line-height: 35px;
+    margin-left: 10px;
+    height: 5vh;
+    position: relative;
+    left: 80px;
+    font-family: Century;
+    transition: all .2s ease-in-out;
+}
+.nav-bar ul li a:hover{
+    background: #B8C309;
+    transform: scale(1.1);
+}
+
+#shopping-cart{
+    height: 70vh;
+    width: 700px;
+    margin-left: 350px;
+    margin-top: 60px;
+    background-color: white;
+    position: relative;
+}
+

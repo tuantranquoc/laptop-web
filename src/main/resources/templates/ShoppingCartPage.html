@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta charset="UTF-8">
+    <title>ShoppingCart</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/ShoppingCartPage.css" th:href="@{/css/ShoppingCartPage.css}"/>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="/app/service/findAllUser" class="Logo">LOGO</a></li>
+        <li><label>
+            <form class="search-" action="/app/service/search">
+                <input class="search" type="text" name="text" placeholder="Search product...">
+                <button class="search-button" type="submit" ><i class="fa fa-home"></i>Go</button>
+            </form>
+        </label></li>
+
+        <li><img src="../static/images/icons8-user-32.png" th:src="@{/images/icons8-user-32.png}"></li>
+        <li><a class="Sign" href="/app/login">Sign in or Create account</a></li>
+        <li><img class="Shopping-logo" src="../static/images/icons8-add-shopping-cart-50.png" th:src="@{/images/icons8-add-shopping-cart-50.png}"></li>
+        <li><a class="Sign" href="#" th:onclick="'window.location.href = \'' + @{/app/service/shoppingCart} + '\''">Shopping Cart</a></li>
+    </ul>
+
+</header>
+<div class="nav-bar">
+    <ul>
+        <li><a class="Home" href="/app/service/findAllUser">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="/app/service/product">Product</a></li>
+        <li><a href="/app/service/test/contact">Contact</a></li>
+    </ul>
+</div>
+<main>
+    <div class="wrap">
+    <section id="shopping-cart">
+        <div class="display-product">
+            <div class="display" th:each="laptop: ${laptops}" th:if="${laptopStat.index < 3}">
+                <div class="img">
+                    <img src="../static/images/Asus-X507UA-BR167T-1.jpg" th:src="@{${laptop.link}}" style="width: 150px">
+                </div>
+                <div class="product-name">
+                    <h2>Dell-Inspision 5730</h2>
+                    <h3>27.000.000$</h3>
+                </div>
+                <form class="form">
+                    <div class="value-button" id="decrease" th:onclick="|decreaseValue('${laptopStat.index}')|" value="Decrease Value">-</div>
+                    <input type="number" th:id="'number' + ${laptopStat.index}" value="0" />
+                    <div class="value-button" id="increase" th:onclick="|increaseValue('${laptopStat.index}')|" value="Increase Value">+</div>
+                </form>
+               <p class="back-cancel"><a class="cancel" style="cursor: pointer;" th:onclick="'window.location.href = \'' + @{/app/service/remove/{id}(id=${laptop.laptopId})} + '\''">X</a></p>
+                <script th:inline="javascript">
+                    /*<![CDATA[*/
+
+                    var message = /*[[${laptop.cost}]]*/ 'default';
+                    var id =  /*[[${laptop.laptopId}]]*/ 'default';
+                    /*]]>*/
+                    var numberId;
+
+                    function increaseValue(id) {
+                        if(id==0) numberId = 'number0';
+                        if(id==1) numberId = 'number1';
+                        if(id==2) numberId = 'number2';
+                        var value = parseInt(document.getElementById(numberId).value, 10);
+                        var sum = parseInt(document.getElementById('sum-number').value,10);
+                        value = isNaN(value) ? 0 : value;
+                        if(value === 4){
+                            alert("you can only buy 4 product!");
+                            value--;
+                        }
+                        value++;
+                        sum+=message;
+                        document.getElementById(numberId).value = value;
+                        document.getElementById('sum-number').value = sum;
+                    }
+
+                    function decreaseValue(id) {
+                        if(id==0) numberId = 'number0';
+                        if(id==1) numberId = 'number1';
+                        if(id==2) numberId = 'number2';
+                        var value = parseInt(document.getElementById(numberId).value, 10);
+                        var sum = parseInt(document.getElementById('sum-number').value,10);
+                        value = isNaN(value) ? 0 : value;
+                        value < 1 ? value = 1 : '';
+                        value--;
+                        sum -= message;
+                        document.getElementById(numberId).value = value;
+                        document.getElementById('sum-number').value = sum;
+                    }
+                </script>
+            </div>
+
+        </div>
+    </section>
+    <section id="sum">
+        <div class="pay">
+            <p>Sum</p>
+            <input class="sum" type="number" id="sum-number" value="0">
+        </div>
+        <div class="by-phone" style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'"
+        >
+            <p><a class="p3">installment</a></p>
+            <p><a class="p4">fast pay by phone</a></p>
+        </div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="/app/service/pay" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="../static/images/master.jpg" th:src="@{/images/master.jpg}" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label  class="label"><b>Username</b></label>
+                    <input class="text" type="text" placeholder="Enter Username" name="userName" required>
+
+                    <label  class="label"><b>Password</b></label>
+                    <input class="password" type="password" placeholder="Enter Password" name="password" required>
+
+                    <button class="button" type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </section>
+    </div>
+    <section id="contact">
+
+        <div class="section-inner">
+
+            <h2 >Contact me</h2>
+            <p>You can find me on</p>
+            <ul>
+                <li><a>Twitter</a></li>
+                <li><a href="https://www.facebook.com/TuanTranQuoc99">Facebook</a></li>
+                <li><a>Instagram</a></li>
+            </ul>
+            <p>Or, you can <a>Send me an email</a></p>
+
+        </div>
+    </section>
+</main>
+</body>
+
+</html>

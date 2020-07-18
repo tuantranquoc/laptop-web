@@ -1,0 +1,336 @@
+
+
+.search{
+    box-sizing: border-box;
+    text-align: left;
+    height: 40px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    font-family: sans-serif;
+    position: relative;
+    width: 450px;
+
+    border: #cda9ac;
+    border-radius: 50px / 50px;
+    border: none;
+    font-size: 17px;
+    background-color: #F0F0F0;
+    outline: none;
+}
+.Logo{
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 20px;
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top:auto;
+    position: relative;
+    color: black;
+}
+header{
+    display: flex;
+}
+header ul{
+    float: left;
+    display: flex;
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 30px;
+    color: black;
+}
+
+header ul li img{
+    width: 32px;
+    position: relative;
+    margin-top: 20px;
+}
+header ul{
+    background-color: #FFFFFF;
+    width: 1435px;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 10vh;
+
+}
+
+.search-button {
+    position: absolute;
+    width: 55px;
+    height: 40px;;
+    top: -2px;
+    left: 49%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px / 50px;
+    margin-top: 19px;
+    margin-right: 70px;
+    padding: 10px;
+    outline: none;
+}
+.Sign{
+    float: right;
+    margin-right: 50px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.Shopping-logo{
+    width: 28px;
+    position: relative;
+    margin-top: 18px;
+}
+
+.nav-bar ul{
+    display: flex;
+    background-color: #403232;
+    height: 5vh;
+    list-style: none;
+}
+.nav-bar {
+    width: 1477px;
+    margin-top: 50px;
+    position: absolute;
+    margin-left: -10px;
+    top: 3px;
+    margin-bottom: 100px;
+}
+
+
+.nav-bar ul li a{
+    text-decoration: none;
+    margin-right: 40px;
+    margin-top: 25px;
+    color: whitesmoke;
+    line-height: 35px;
+    margin-left: 10px;
+    height: 5vh;
+    position: relative;
+    left: 80px;
+    font-family: Century;
+    transition: all .2s ease-in-out;
+}
+.nav-bar ul li a:hover{
+    background: #B8C309;
+    transform: scale(1.1);
+}
+section{
+    width: 1475px;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: -10px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#search-container{
+    margin-top: 100px;
+    height: 100vh;
+    width: 200px;
+    margin-left: 100px;
+    background-color: white;
+    border: none;
+}
+#product-container{
+    width: 930px;
+    margin-left: 30px;
+    margin-top: 100px;
+    height: 200vh;
+    background-color: white;
+    border:none;
+}
+.bar{
+    display: flex;
+    position: relative;
+    margin-top: 0px;
+    bottom: 0px;
+}
+.search-bar{
+    display: inline-block;
+    position: relative;
+    top: 50px;
+}
+
+.search-bar h3{
+    margin-top: -360px;
+    margin-left: -70px;
+}
+.search-bar hr{
+    margin-top: -360px;
+    margin-left: -70px;
+}
+
+.search-brand {
+    text-align: right;
+}
+.search-brand p{
+    text-align: center;
+}
+
+.list{
+    text-align: left;
+    margin-left: 100px;
+}
+
+.display-product-info:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.display-content{
+    float: left;
+    width: 20%;
+    margin-right: 0px;
+    padding-bottom: 30px;
+}
+.display-content hr{
+    width: 100px;
+}
+
+.display-product{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.display-product:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.display-product-info{
+    position:relative;
+    top: 0px;
+    left: 0px;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+.display-content{
+    padding: 10px;
+    margin-right: 0px;
+    float: left;
+    width: 290px;
+
+}
+.display-content:hover{   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content:active{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content p{
+    text-align: left;
+    font-size: 13px;
+    color:  #595959;
+}
+.display-content hr{
+    width: 100px;
+}
+
+
+
+#display{
+    height: 67vh;
+    width: 1200px;
+    margin-left: 120px;
+    background-color: white;
+    border: none;
+}
+
+#space{
+    height: 5vh;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.section-name-1 h2{
+    margin-left: 120px;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: #3d455c;
+}
+
+
+.display-product-info-option{
+    display: flex;
+
+}
+.display-content-option{
+    padding: 5px;
+    margin-right: 0px;
+    float: left;
+    width: 290px;
+
+}
+.display-content-option:hover{   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content-option:active{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.display-content-option p{
+    text-align: left;
+    font-size: 13px;
+    color:  #595959;
+}
+.display-content-option hr{
+    width: 100px;
+}
+
+.search-brand {
+    position: relative;
+    left: 25px;
+}
+
+.search-bar h3{
+    position: relative;
+    right: 25px;
+}
+.search-brand input{
+    width: 125px;
+    position: relative;
+    right: 30px;
+}
+.search-brand button{
+    width: 40px;
+    height: 3.17vh;
+    position: relative;
+    right: 35px;
+}
+.list{
+    position: relative;
+    margin-top: 30px;
+}
+
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.75)), url('../images/giphy.gif');
+}
+#contact {
+    height: 50vh;
+}
+
+#contact ul{
+    font-family: Century;
+    color: #3d455c;
+    text-align: left;
+    position: relative;
+    left: 30px;
+}
+#contact h2{
+    font-family:  Century;
+    color: #333333;
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-family: sans-serif;
+}

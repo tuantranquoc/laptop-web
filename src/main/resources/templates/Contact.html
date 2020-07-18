@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact form</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/test.css" th:href="@{/css/test.css}"/>
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo" >
+            <img src="../static/images/mountain-2-48.gif" alt="">
+        </div>
+        <ul class="nav-area">
+            <li><a href="/app/service/test">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/app/login">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <div class="wrapper1">
+        <ul class="nav-area1">
+            <li><a href="/app/login">LOGIN</a></li>
+            <li><a href="/app/login">SIGN UP</a> </li>
+            <li><a href="/app/service/test/shoppingCart">Shopping Cart</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search here...">
+    </div>
+</header>
+<div class="contactForm">
+    <form action="action_page.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+</body>
+</html>

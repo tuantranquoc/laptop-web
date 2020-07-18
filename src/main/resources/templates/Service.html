@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://java.sun.com/JSP/Page">
+<head>
+    <meta charset="UTF-8">
+    <title>Service</title>
+</head>
+<body>
+<output th:text="${success}"></output>
+<form>
+    <a href="/app/service/findAllUser" class="button">FIND ALL USER</a><br>
+    <a href="/app/api/findAllProduct" class="button">FIND ALL PRODUCT</a><br>
+    <a href="/app/api/findCurrent" class="button">FIND CURRENT</a><br>
+    <a href="/app/api/sign" class="button">SIGN IN</a><br>
+    <a href="/app/api/logout" class="button">LOGOUT</a><br>
+    <a href="/app/login" class="button">LOGIN</a>
+</form>
+</body>
+</html>

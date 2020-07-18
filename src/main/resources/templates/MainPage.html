@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/XSL/Transform">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Info</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/MainPage.css" th:href="@{/css/MainPage.css}"/>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="/app/service/findAllUser" class="Logo">LOGO</a></li>
+        <li><label>
+            <form action="/app/service/search">
+                <input class="search" type="text" name="text" placeholder="Search product...">
+                <button class="search-button" type="submit" ><i class="fa fa-home"></i>Go</button>
+            </form>
+        </label></li>
+
+        <li><img src="../static/images/icons8-user-32.png" th:src="@{/images/icons8-user-32.png}"></li>
+        <li><a class="Sign" href="/app/login">Sign in or Create account</a></li>
+        <li><img class="Shopping-logo" src="../static/images/icons8-add-shopping-cart-50.png" th:src="@{/images/icons8-add-shopping-cart-50.png}"></li>
+        <li><a class="Sign" href="#" th:onclick="'window.location.href = \'' + @{/app/service/shoppingCart} + '\''">Shopping Cart</a></li>
+    </ul>
+
+</header>
+<div class="nav-bar">
+    <ul>
+        <li><a class="Home" href="/app/service/findAllUser">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="/app/service/product">Product</a></li>
+        <li><a href="/app/service/test/contact">Contact</a></li>
+    </ul>
+</div>
+<main>
+    <section id="first">
+        <div class="question">
+            <h3>Laptop</h3>
+        <div class="cost">
+            <div class="cost-laptop" style="cursor: pointer" th:onclick="'window.location.href = \'' + @{/app/service/product/sort/type/1} + '\''">
+                <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{/images/Dell-N5570-NK533.jpg} "style="width: 100px;">
+                <p>$429 - $643</p>
+            </div>
+            <div class="cost-laptop" style="cursor: pointer" th:onclick="'window.location.href = \'' + @{/app/service/product/sort/type/2} + '\''">
+                <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{/images/Dell-N5570-NK533.jpg} "style="width: 100px;">
+                <p>$643 - $871</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="second">
+        <div class="brand">
+            <h3>Laptop Brand</h3>
+            <div class="cost" >
+            <div class="cost-laptop" th:onclick="'window.location.href = \'' + @{/app/service/product/sort/dell} + '\''" style="cursor: pointer">
+                <img src="../static/images/brand-dellpng" th:src="@{/images/brand-dellpng}" style="width: 100px;">
+                <p>DELL</p>
+            </div>
+            <div class="cost-laptop" th:onclick="'window.location.href = \'' + @{/app/service/product/sort/asus} + '\''" style="cursor: pointer">
+                <img src="../static/images/Asus.jpg" th:src="@{/images/Asus.jpg}"style="width: 100px;">
+                <p>ASUS</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="section-name-1">
+        <h2>Chose by me</h2>
+    </div>
+    <section id="display-01">
+        <div class="display-product">
+            <div class="display-product-info">
+                    <div class="display-content" th:each="laptop: ${laptops}" style="cursor: pointer;"
+                         th:if="${laptopStat.index < 4}"
+                         th:onclick="'window.location.href = \'' + @{/app/service/product/{id}(id=${laptop.laptopId})} + '\''">
+                        <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{${laptop.link}}" style="width: 160px" alt="Add">
+                        <h3><a th:text="${laptop.lapDescription}"></a></h3>
+
+                        <h3 class="cost">$<a th:text="${laptop.cost}"></a></h3>
+                        <p>Start: <a th:text="${laptop.lapStart}"></a></p>
+                        <hr>
+                        <p>Screen: <a th:text="${laptop.screen}"></a></p>
+                        <p>CPU: <a th:text="${laptop.cpu}"></a></p>
+                        <p>RAM: <a th:text="${laptop.ram}"></a></p>
+                        <p>VGA: <a th:text="${laptop.vga}"></a></p>
+                        <p>HDH: <a th:text="${laptop.hdh}"></a></p>
+                        <p>WEIGHT: <a th:text="${laptop.weight}"></a></p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-name-1">
+        <h2>Laptop Gaming - Graphic</h2>
+    </div>
+    <section id="display">
+        <div class="display-product">
+            <div class="display-product-info">
+                <div class="display-content" th:each="laptop: ${laptops}" alt="Add it to your shopping Cart"
+                     style="cursor: pointer;"
+                     th:if="${laptopStat.index < 4}"
+                     th:onclick="'window.location.href = \'' + @{/app/service/product} + '\''">
+                    <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{${laptop.link}}" style="width: 160px" alt="Add">
+                    <h3><a th:text="${laptop.lapDescription}"></a></h3>
+                    <h3 class="cost">$<a th:text="${laptop.cost}"></a></h3>
+                    <p>Start: <a th:text="${laptop.lapStart}"></a></p>
+                    <hr>
+                    <p>Screen: <a th:text="${laptop.screen}"></a></p>
+                    <p>CPU: <a th:text="${laptop.cpu}"></a></p>
+                    <p>RAM: <a th:text="${laptop.ram}"></a></p>
+                    <p>VGA: <a th:text="${laptop.vga}"></a></p>
+                    <p>HDH: <a th:text="${laptop.hdh}"></a></p>
+                    <p>WEIGHT: <a th:text="${laptop.weight}"></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <div class="section-name-1">
+        <h2>Laptop For Work</h2>
+    </div>
+    <section id="display-02">
+        <div class="display-product">
+            <div class="display-product-info">
+                <div class="display-content" th:each="laptop: ${laptops}" alt="Add it to your shopping Cart"
+                     style="cursor: pointer;"
+                     th:if="${laptopStat.index < 4}"
+                     th:onclick="'window.location.href = \'' + @{/app/service/product} + '\''">
+                    <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{${laptop.link}}" style="width: 160px" alt="Add">
+                    <h3><a th:text="${laptop.lapDescription}"></a></h3>
+                    <h3 class="cost">Cost: <a th:text="${laptop.cost}"></a></h3>
+                    <p>Start: <a th:text="${laptop.lapStart}"></a></p>
+                    <hr>
+                    <p>Screen: <a th:text="${laptop.screen}"></a></p>
+                    <p>CPU: <a th:text="${laptop.cpu}"></a></p>
+                    <p>RAM: <a th:text="${laptop.ram}"></a></p>
+                    <p>VGA: <a th:text="${laptop.vga}"></a></p>
+                    <p>HDH: <a th:text="${laptop.hdh}"></a></p>
+                    <p>WEIGHT: <a th:text="${laptop.weight}"></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-name-1">
+        <h2>Recent Product</h2>
+    </div>
+    <section id="contact">
+        <div class="section-inner">
+
+            <h2 >Contact me</h2>
+            <p>You can find me on</p>
+            <ul>
+                <li><a>Twitter</a></li>
+                <li><a href="https://www.facebook.com/TuanTranQuoc99">Facebook</a></li>
+                <li><a>Instagram</a></li>
+            </ul>
+            <p>Or, you can <a>Send me an email</a></p>
+
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

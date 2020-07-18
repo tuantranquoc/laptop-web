@@ -1,0 +1,589 @@
+* {
+    box-sizing: border-box;
+}
+header{
+    background: #cda9ac;
+}
+
+#bar{
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+.header-logo{
+    color: #069370;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+
+}
+.clearfix{
+    clear: both;
+}
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+/* test o day*/
+
+#hero {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url("../images/nothing.jpg");
+    height: 80vh;
+}
+#about {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('../images/nothing.jpg');
+}
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.75)), url('../images/giphy.gif');
+}
+
+section{
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#hero h1{
+    font-family: sans-serif;
+    color: #3d455c;
+}
+#contact {
+    height: 50vh;
+}
+
+#shopping{
+    height: 70vh;
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url("../images/rose.jpg");
+}
+
+#about {
+    height: 50vh;
+}
+
+#about h2{
+    font-family: Century;
+    color: #3d455c;
+    text-align: center;
+
+}
+
+#about ul{
+    text-align: left;
+    position: relative;
+    left: 30px;
+}
+#about li{
+    position: relative;
+    left: 240px;
+    font-family: Century;
+    color: #3d455c;
+}
+
+#contact ul{
+    font-family: Century;
+    color: #3d455c;
+    text-align: left;
+    position: relative;
+        left: 30px;
+}
+#contact h2{
+    font-family:  Century;
+    color: #333333;
+    text-align: center;
+}
+#contact p{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#product {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: #3d455c;
+}
+
+body{
+    margin: 50px 0 0;
+    font-family: poppins;
+}
+
+.content01 li{
+    display: inline-block;
+
+
+}
+.content01 img{
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 50px;
+    float: left;
+    left: 500px;
+}
+.content01{
+    text-align: center;
+}
+
+
+.content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 50px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+}
+
+.content button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: 	#3d455c;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+/*BARRRRRRRR*/
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+     display: inline-block;
+}
+.nav-area li a{
+      color: darkcyan;
+      text-decoration: none;
+      padding: 5px 20px;
+      font-family: poppins;
+      font-size: 16px;
+}
+.nav-area li a:hover{
+       background: burlywood;
+       color: gray;
+}
+
+.nav-area{
+    position: absolute;
+    top: 0;
+    width: 100%;}
+.wrapper1 {
+    width: 1170px;
+    margin: auto;
+}.nav-area1{
+     float: right;
+     list-style: none;
+     margin-top: 30px;
+ }.nav-area1 li{
+      display: inline-block;
+  }.nav-area1 li a{
+       color: black;
+       text-decoration: none;
+       padding: 5px 20px;
+       font-family: poppins;
+       font-size: 16px;
+   }.nav-area1 li a:hover{
+        background: #fff;
+        color: #333;
+    }.nav-area1{
+         position: absolute;
+         margin: 40px 0 0 900px;
+         top: -10px;
+     }
+.logo img{
+    position: relative;
+    width: 42px;
+    top: 20px;
+    left: -50px;
+}
+
+.search {
+    margin: auto;
+    font: message-box;
+    font-family: sans-serif;
+    size: 100px;
+    position: relative;
+    width: 200px;
+}
+.search input[type=text]{
+    size: 50px;
+    text-align: left;
+}
+
+/*TABLE HERE*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*SHOPPING CART*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.shopping-cart {
+    width: 1000px;
+    height: 500px;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    height: 60px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.item {
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+}
+
+.item:nth-child(3) {
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+}
+
+.buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+    display: inline-block;
+    Cursor: pointer;
+}
+.delete-btn {
+    width: 18px;
+    height: 17px;
+
+}
+
+.like-btn {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background-size: 2900%;
+    background-repeat: no-repeat;
+}
+
+.image {
+    margin-right: 50px;
+    float: left;
+}
+
+
+.description {
+    padding-top: 10px;
+    margin-right: 300px;
+    width: 115px;
+    float: left;
+}
+
+.description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+}
+
+.description span:first-child {
+    margin-bottom: 5px;
+}
+.description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939E;
+}
+
+.quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+    float: right;
+}
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    height: 4vh;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.minus-btn img {
+    margin-bottom: 3px;
+}
+.plus-btn img {
+    margin-top: 2px;
+}
+
+button:focus,
+input:focus {
+    outline:0;
+}
+
+.total-price {
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+    float: left;
+    margin-right: 20px;
+}
+@media (max-width: 800px) {
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .item {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .image img {
+        width: 50%;
+    }
+    .image,
+    .quantity,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+    .buttons {
+        margin-right: 20px;
+    }
+}
+
+/**/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contactForm {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEPAGE TEST</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/test.css" th:href="@{/css/test.css}"/>
+</head>
+<header>
+    <div class="wrapper">
+        <div class="logo" >
+            <img src="../static/images/mountain-2-48.gif" alt="">
+        </div>
+        <ul class="nav-area">
+            <li><a href="/app/service/test">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/app/login">Services</a></li>
+            <li><a href="/app/service/test/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="wrapper1">
+        <ul class="nav-area1">
+            <li><a href="/app/login">LOGIN</a></li>
+            <li><a href="/app/login">SIGN UP</a> </li>
+            <li><a href="/app/service/test/shoppingCart">Shopping Cart</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search here...">
+    </div>
+</header>
+<section id="nav-bar">
+<header id="bar">
+    <a href="" class="header-logo">Logo</a>
+    <div class="menu-toggle"></div>
+    <nav>
+        <ul>
+            <li><a href="/app/service/test">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/app/login">Services</a></li>
+            <li><a href="/app/service/test/contact">Contact</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+</header>
+</section>
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<main>
+    <section id="hero">
+        <div class="section-inner">
+            <img th:src="@{/images/giphy.gif}" width="480" height="360" frameBorder="0" class="giphy-embed"
+                 allowFullScreen/><p><a href="https://giphy.com/gifs/BHNfhgU63qrks">via GIPHY</a></p>
+            <h1>New Product should be here</h1>
+        </div>
+    </section>
+    <section id="product">
+        <div class="main">
+            <h2>MY PRODUCTS</h2>
+            <hr>
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="column" th:each="product : ${products}">
+                    <div class="content">
+                        <img src="../static/images/giphy.gif" th:src="@{${message}}" alt="Mountains" style="width:100%">
+                        <h3><a th:text="${product.productName}"></a></h3>
+                        <p><a th:text="${product.productCost}"></a></p>
+                        <p><button>Add to Cart</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>About me</h2>
+            <p>I'm a really awesome programmer. Everyday I wake up, I do some coding, lean new thing and back to reality</p>
+            <h3>Achievements</h3>
+            <ul >
+                <li>Web Design</li>
+                <li>21 and single</li>
+                <li>First web app</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section-inner">
+            <h2>Contact me</h2>
+            <p>You can find me on</p>
+            <ul>
+                <li><a>Twitter</a></li>
+                <li><a>Reddit</a></li>
+                <li><a>Instagram</a></li>
+            </ul>
+            <p>Or, you can <a>Send me an email</a></p>
+        </div>
+    </section>
+</main>
+<footer>
+    @Copyright 17521226@gm.uit.edu.vn
+</footer>
+</body>
+</html>

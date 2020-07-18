@@ -1,0 +1,120 @@
+
+body{
+    margin: 50px 0 0;
+    font-family: poppins;
+}
+header{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #3d455c;
+}
+header *{
+    display: inline;
+    height: 50px;
+}
+header ul{
+    padding:0;
+}
+
+header li{
+    margin-left: 50px;
+}
+header input[type=text]{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border: none;
+    font-size: 10px;
+}
+section{
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#hero iframe{
+     width: 500px;
+    border-radius: 50%;
+}
+footer{
+    text-align: center;
+    padding: 50px;
+}
+#hero h1{
+    font-size: 3em;
+}
+section h2{
+    font-size: 2.5em;
+}
+section h3{
+    font-size: 1.5em;
+}
+#hero {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url("../images/nothing.jpg");
+}
+#about {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('../images/nothing.jpg');
+}
+#contact {
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('../images/giphy.gif');
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*cho nay test*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 50px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+#no .row{
+
+}
+
+/*TABLE HERE*/
+
+
+
+

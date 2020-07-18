@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>no name</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/DisplayProduct.css" th:href="@{/css/DisplayProduct.css}"/>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="/app/service/findAllUser" class="Logo">LOGO</a></li>
+        <li><label>
+            <form action="/app/service/search">
+                <input class="search" type="text" name="text" placeholder="Search product...">
+                <button class="search-button" type="submit" ><i class="fa fa-home"></i>Go</button>
+            </form>
+        </label></li>
+
+        <li><img src="../static/images/icons8-user-32.png" th:src="@{/images/icons8-user-32.png}"></li>
+        <li><a class="Sign" href="/app/login">Sign in or Create account</a></li>
+        <li><img class="Shopping-logo" src="../static/images/icons8-add-shopping-cart-50.png" th:src="@{/images/icons8-add-shopping-cart-50.png}"></li>
+        <li><a class="Sign" href="#" th:onclick="'window.location.href = \'' + @{/app/service/shoppingCart} + '\''">Shopping Cart</a></li>
+    </ul>
+
+</header>
+<div class="nav-bar">
+    <ul>
+        <li><a class="Home" href="/app/service/findAllUser">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="/app/service/product">Product</a></li>
+        <li><a href="/app/service/test/contact">Contact</a></li>
+    </ul>
+</div>
+<main>
+    <section id="product-name">
+        <div class="product-name">
+            <div class="product-name-inline">
+                <h2 th:text="${laptop.lapDescription}">Dell-Inspision 5730</h2>
+                <p><a>(No.00483434)</a></p>
+            </div>
+            <p class="product-name-p"><a>73 khách hàng đánh giá | 238 câu hỏi được trả lời</a></p>
+        </div>
+    </section>
+    <div class="section-control-1" >
+        <section id="image">
+            <div class="img">
+                <img src="../static/images/Asus-X507UA-BR167T-1.jpg" th:src="@{${laptop.link}}" style="width: 300px">
+                <div class="back" style="cursor: pointer;" th:onclick="'window.location.href = \'' + @{/app/service/findAllUser} + '\''">
+                    <p><a href="/app/service/findAllUser">Back to main page</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="cost">
+            <div class="cost-info" >
+                <div class="h3">
+                    <h3>$</h3>
+                <h3 class="cost" th:text="${laptop.cost}"></h3>
+                </div>
+                <div class="cost-ul">
+                    <div class="ul-1">
+                            <p class="ul-1-p1">Core i5-8300H</p>
+                            <p class="ul-1-p2">6.690.000</p>
+                    </div>
+                    <div class="ul-2">
+                            <p class="ul-1-p1">Core i7-8750H</p>
+                            <p class="ul-1-p2">6.690.000</p>
+                    </div>
+                </div>
+                <div class="promotion">
+                    <h3 class="h3">Promotion</h3>
+                    <li>Microsoft Office</li>
+                    <li>Game key</li>
+                    <li>Antivirus Software</li>
+                </div>
+                <div class="add-shopping-cart" style="cursor: pointer;"
+                     th:onclick="'window.location.href = \'' + @{/app/service/shoppingCart/{id}(id=${laptop.laptopId})} + '\''">
+                    <p><a class="p1">Add to cart</a></p>
+                    <p><a class="p2">Giao hang trong 1h hoac nhan tai shop</a></p>
+                </div>
+                <div class="payment-type" >
+                    <div class="by-phone" style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'"
+                    >
+                        <p><a class="p3">installment</a></p>
+                        <p><a class="p4">fast pay by phone</a></p>
+                    </div>
+                    <div class="by-card" style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'"
+                    >
+                        <p><a class="p3">installment by card</a></p>
+                        <p><a class="p4">Visa, Master card, JBC</a></p>
+                    </div>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="/app/service/pay" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <img src="../static/images/master.jpg" th:src="@{/images/master.jpg}" alt="Avatar" class="avatar">
+                            </div>
+
+                            <div class="container">
+                                <label  class="label"><b>Username</b></label>
+                                <input class="text" type="text" placeholder="Enter Username" name="userName" required>
+
+                                <label  class="label"><b>Password</b></label>
+                                <input class="password" type="password" placeholder="Enter Password" name="password" required>
+
+                                <button class="button" type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01');
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section id="technical-specifications">
+            <div class="technical-specifications">
+                <h3>Technical Specifications</h3>
+                <hr>
+                <p>SCREEN: <a th:text="${laptop.screen}"></a></p>
+                <p>CPU: <a th:text="${laptop.cpu}"></a></p>
+                <p>RAM: <a th:text="${laptop.ram}"></a></p>
+                <p>VGA: <a th:text="${laptop.vga}"></a></p>
+                <p>HDH: <a th:text="${laptop.hdh}"></a></p>
+                <p>WEIGHT: <a th:text="${laptop.weight}"></a></p>
+                <p>HARDWARE: <a></a></p>
+                <p>SIZE: <a></a></p>
+            </div>
+        </section>
+    </div>
+    <div class="section-name-1">
+        <h2>Laptop Gaming - Graphic</h2>
+    </div>
+    <section id="display-01">
+        <div class="display-product">
+            <div class="display-product-info">
+                <div class="display-content" th:each="laptop: ${laptops}" style="cursor: pointer;"
+                     th:if="${laptop.laptopId < 5}"
+                     th:onclick="'window.location.href = \'' + @{/app/service/product/{id}(id=${laptop.laptopId})} + '\''">
+                    <img src="../static/images/Dell-N5570-NK533.jpg" th:src="@{${laptop.link}}" style="width: 160px" alt="Add">
+                    <h3><a th:text="${laptop.lapDescription}"></a></h3>
+
+                    <h3 class="cost">$<a th:text="${laptop.cost}"></a></h3>
+                    <p>Start: <a th:text="${laptop.lapStart}"></a></p>
+                    <hr>
+                    <p>Screen: <a th:text="${laptop.screen}"></a></p>
+                    <p>CPU: <a th:text="${laptop.cpu}"></a></p>
+                    <p>RAM: <a th:text="${laptop.ram}"></a></p>
+                    <p>VGA: <a th:text="${laptop.vga}"></a></p>
+                    <p>HDH: <a th:text="${laptop.hdh}"></a></p>
+                    <p>WEIGHT: <a th:text="${laptop.weight}"></a></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+
+        <div class="section-inner">
+
+            <h2 >Contact me</h2>
+            <p>You can find me on</p>
+            <ul>
+                <li><a>Twitter</a></li>
+                <li><a href="https://www.facebook.com/TuanTranQuoc99">Facebook</a></li>
+                <li><a>Instagram</a></li>
+            </ul>
+            <p>Or, you can <a>Send me an email</a></p>
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

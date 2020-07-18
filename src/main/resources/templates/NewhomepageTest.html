@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEPAGE TEST</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/new.css" th:href="@{/css/new.css}"/>
+</head>
+<body>
+<header>
+    <img src="../static/images/master.jpg" th:href="@{/images/master.jpg}">
+    <nav>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Service</a></li>
+            <li><a href="/app/service/test/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="hero">
+        <div class="section-inner">
+            <iframe src="../static/images/giphy.gif" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/BHNfhgU63qrks">via GIPHY</a></p>
+            <h1>Hi, I am Tran Quoc Tuan.</h1>
+        </div>
+    </section>
+    <section id="no">
+        <div class="row">
+            <div class="card" th:each="product : ${products}">
+                <img src="../static/images/Dell-N5570-NK533.jpg"  th:src="@{${message}}" alt="Denim Jeans" style="width:100%"/>
+                <h1><a th:text="${product.productName}"></a></h1>
+                <p class="price"><a th:text="${product.productCost}"></a></p>
+                <p>Some text about the product..</p>
+                <p><button>Add to Cart</button></p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>About me</h2>
+            <p>I'm a really awesome programmer. Everyday I wake up, I do some coding, lean new thing and back to reality</p>
+            <h3>Achievements</h3>
+            <ul>
+                <li>Web Design</li>
+                <li>21 and single</li>
+                <li>First web app</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section-inner">
+            <h2>Contact me</h2>
+            <p>You can find me on</p>
+            <ul>
+                <li><a>Twitter</a></li>
+                <li><a>Reddit</a></li>
+                <li><a>Instagram</a></li>
+            </ul>
+            <p>Or, you can <a>Send me an email</a></p>
+        </div>
+    </section>
+</main>
+<footer>
+    @Copyright TUan ViP Pro.com
+</footer>
+</body>
+</html>
